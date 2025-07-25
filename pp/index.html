@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hindi Online Calisthenics Coaching</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+      background: #fff;
+      color: #000;
+    }
+
+    header {
+      background-color: #000;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    .carousel {
+      width: 100%;
+      position: relative;
+      height: 700px;
+      overflow: hidden;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: 700px;
+      object-fit: cover;
+      display: none;
+    }
+
+    .carousel img.active {
+      display: block;
+    }
+
+    .plans, .benefits {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .plans h2, .benefits h2 {
+      margin-bottom: 2rem;
+    }
+
+    .plan-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 2rem;
+      width: 300px;
+      background: #f9f9f9;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+
+    .card button {
+      margin-top: 1rem;
+      padding: 0.75rem 1.25rem;
+      background: #25D366;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .benefits-icons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .benefit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .benefit img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .assistant {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 160px;
+      text-align: center;
+      z-index: 1000;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .assistant img {
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .speech {
+      background: #f0f0f0;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-top: 0.5rem;
+      font-size: 14px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .plan-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .assistant {
+        width: 120px;
+        right: 10px;
+        bottom: 10px;
+      }
+
+      .assistant img {
+        width: 90px;
+        height: 90px;
+      }
+
+      .carousel {
+        height: 400px;
+      }
+
+      .carousel img {
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Calisthenics Strength</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#plans">Plans</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="carousel" data-aos="fade-in">
+    <img src="data/pexels-elly-fairytale-3823063.jpg" class="active" alt="Slide 1">
+    <img src="data/pexels-johnny-garcia-1041229-2011383.jpg" alt="Slide 2">
+    <img src="data/pexels-thelazyartist-999309.jpg" alt="Slide 3">
+  </section>
+
+  <section class="plans" id="plans" data-aos="fade-up">
+    <h2>Join Our Plans</h2>
+    <div class="plan-cards">
+      <div class="card">
+        <h3>One Month</h3>
+        <p>₹999/-</p>
+        <button onclick="window.open('https://wa.me/yourwhatsappnumber')">Contact on WhatsApp</button>
+      </div>
+      <div class="card">
+        <h3>Three Months</h3>
+        <p>₹2799/-</p>
+        <button onclick="window.open('https://wa.me/yourwhatsappnumber')">Contact on WhatsApp</button>
+      </div>
+      <div class="card">
+        <h3>Six Months</h3>
+        <p>₹5699/-</p>
+        <button onclick="window.open('https://wa.me/yourwhatsappnumber')">Contact on WhatsApp</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits" id="benefits" data-aos="fade-up">
+    <h2>What are the Benefits of Calisthenics?</h2>
+    <div class="benefits-icons">
+      <div class="benefit">
+        <img src="data/pexels-mart-production-8032753.jpg" alt="Stay Healthy">
+        <p>Stay Healthy</p>
+      </div>
+      <div class="benefit">
+        <img src="data/pexels-maksgelatin-4775197.jpg" alt="Stay Strong">
+        <p>Stay Strong</p>
+      </div>
+      <div class="benefit">
+        <img src="data/pexels-leonardho-1552248.jpg" alt="Burn Fat">
+        <p>Burn Fat</p>
+      </div>
+      <div class="benefit">
+        <img src="data/pexels-thelazyartist-999309.jpg" alt="Build Muscle">
+        <p>Build Muscle</p>
+      </div>
+      <div class="benefit">
+        <img src="data/pexels-victorfreitas-841130.jpg" alt="Increase Endurance">
+        <p>Increase Endurance</p>
+      </div>
+      <div class="benefit">
+        <img src="data/pexels-polina-tankilevitch-6516165.jpg" alt="Learn New Skills">
+        <p>Learn New Skills</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>Train Yourself Beyond the Limits</p>
+    <p>WhatsApp | Instagram | YouTube | Email</p>
+  </footer>
+
+  <div class="assistant">
+    <img src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png" alt="AI Assistant">
+    <div class="speech" id="speech-bubble">Namaste! Calisthenics se body healthy aur strong banti hai!</div>
+  </div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Carousel auto-slide
+    const carouselImages = document.querySelectorAll(".carousel img");
+    let index = 0;
+    setInterval(() => {
+      carouselImages.forEach((img, i) => {
+        img.classList.remove("active");
+        if (i === index) img.classList.add("active");
+      });
+      index = (index + 1) % carouselImages.length;
+    }, 4000);
+
+    // Speech assistant messages
+    const messages = [
+      "Namaste! Calisthenics se body healthy aur strong banti hai!",
+      "Kya aap naye ho fitness me? Yeh plans aapke liye best hain!",
+      "Join karke fat burn aur muscle gain dono karein!",
+      "Contact karo WhatsApp pe aur shuru karo journey!"
+    ];
+    let msgIndex = 0;
+    setInterval(() => {
+      document.getElementById("speech-bubble").innerText = messages[msgIndex];
+      msgIndex = (msgIndex + 1) % messages.length;
+    }, 5000);
+  </script>
+</body>
+</html>
